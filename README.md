@@ -9,7 +9,18 @@ Run `python3 -m http.server 4173 --bind 127.0.0.1` from this directory, then ope
 ## Publish
 
 GitHub Pages serves the root of `main`. Push a commit to publish.
-The custom domain is `monoclesociety.com`; DNS must point to GitHub Pages before adding/enforcing the custom domain.
+Live site: https://monoclesociety.github.io/monocle-website/
+
+## Connect monoclesociety.com
+
+DNS is currently hosted at Hover (`ns1.hover.com`, `ns2.hover.com`); apex A and www CNAME records were absent on 2026-11-24. The custom domain has not yet been set on Pages, so the live GitHub URL remains usable.
+
+1. In [GitHub Pages settings](https://github.com/monoclesociety/monocle-website/settings/pages), save `monoclesociety.com` as the custom domain. GitHub creates a `CNAME` file on main; pull that commit before subsequent changes.
+2. In Hover, add four A records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
+3. Add a CNAME record for `www` pointing to `monoclesociety.github.io` (no repository path). Preserve mail and other unrelated DNS records.
+4. After GitHub confirms DNS and provisions the certificate, enable Enforce HTTPS. Verify both apex and www.
+
+Reference: [GitHub custom-domain setup](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Brand provenance
 
