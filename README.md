@@ -9,7 +9,7 @@ Run `python3 -m http.server 4173 --bind 127.0.0.1` from this directory, then ope
 ## Publish
 
 GitHub Pages serves the root of `main`. Push a commit to publish.
-Custom domain: http://monoclesociety.com/ (HTTPS provisioning pending).
+Live site: https://monoclesociety.com/
 GitHub Pages URL: https://monoclesociety.github.io/monocle-website/ (redirects to the custom domain).
 
 ## Domain configuration
@@ -23,7 +23,7 @@ Configured on 2026-11-24:
 - Existing Google mail MX and SPF TXT records preserved.
 - Authoritative Hover DNS and public resolvers returned the new records. GitHub served the correct page with the custom-domain Host header.
 
-GitHub is still provisioning the custom-domain TLS certificate. Once it is ready, enable Enforce HTTPS in [Pages settings](https://github.com/monoclesociety/monocle-website/settings/pages) and verify both apex and www. Do not bypass certificate errors while provisioning is pending.
+GitHub approved the TLS certificate for both apex and www on 2026-11-24 (initial certificate expiry 2027-02-22). Enforce HTTPS is enabled in [Pages settings](https://github.com/monoclesociety/monocle-website/settings/pages). Verified apex HTTPS returns 200, HTTP redirects to HTTPS, and www HTTPS redirects to the apex with certificate validation enabled. Some resolvers may retain earlier negative DNS responses until their caches expire.
 
 Reference: [GitHub custom-domain setup](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
