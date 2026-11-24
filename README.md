@@ -29,7 +29,7 @@ Reference: [GitHub custom-domain setup](https://docs.github.com/en/pages/configu
 
 ## Brand provenance
 
-`assets/monocle-society.svg` is the original white vector icon (including its trademark) from the previous website, copied unchanged from `src/assets/images/logo_monocle_icon.svg` in the private `monoclesociety/monoclesociety.com` repository. It replaces the Canva thumbnail at the owner's request on 2026-11-24. Both the centered page logo and favicon use this SVG. Its original aspect ratio is preserved. The red gradient is a chosen presentation color, not a verified kit palette.
+`assets/monocle-society.svg` is the white vector icon from the previous website, sourced from `src/assets/images/logo_monocle_icon.svg` in the private `monoclesociety/monoclesociety.com` repository. It replaces the Canva thumbnail at the owner's request on 2026-11-24. Both the centered page logo and favicon use this SVG. The trademark lettering has been removed at the owner’s request, and the viewBox is cropped to the square circular mark so it remains centered. The red gradient is a chosen presentation color, not a verified kit palette.
 
 Canva website reference: https://canva.link/9xebq3t1lsfs1lu
 Project/evidence: https://linear.app/monoclesociety/issue/MON-34/build-and-deploy-the-monocle-society-logo-landing-page
